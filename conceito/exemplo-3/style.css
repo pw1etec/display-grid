@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    height: 100vh;
+}
+
+.tabuleiro{
+    height: 600px;
+    width: 600px;
+   border: 3px solid #333;
+  
+    margin: 50px auto;
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+}
+
+.linha{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+   
+}
+
+.casa{
+    border-left: 1px solid #333;
+    border-bottom: 1px solid #333;
+    
+}
+ .linha:nth-child(2n+1) .casa:nth-child(2n+1){
+    background-color: rgb(6, 6, 6);
+}
+ .linha:nth-child(2n) .casa:nth-child(2n){
+    background-color: rgb(6, 6, 6);
+}

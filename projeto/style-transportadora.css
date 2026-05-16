@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f2f4f7;
+    color: #333;
+}
+ul{
+    list-style: none;
+}
+.container{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "sidebar main"
+    "footer footer";
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 60px 1fr 40px;
+    height: 100vh;
+    gap: 10px;
+    padding: 10px;
+    
+}
+
+
+
+.header{
+grid-area: header;
+background-color: #003366;
+color: #ffff;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+font-size: 1.3rem;
+}
+
+.sidebar{
+    grid-area: sidebar;
+    background-color: #e0e7ef;
+    padding: 20px;
+}
+.sidebar ul{
+  
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.sidebar ul li{
+    padding: 10px;
+    background-color:  #cfd9e3;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.sidebar ul li:hover{
+    background-color: #b0c4de;
+}
+.main{
+    grid-area: main;
+    display: grid;
+    grid-template-rows :auto 1fr;
+    gap: 20px;
+}
+.grid-cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+.card{
+    padding: 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.card.green{
+    background-color: #4caf50;
+}
+.card.orange{
+    background-color: #fd7e14;
+}
+.card.red{
+    background-color: #dc3545;
+}
+.card.blue{
+    background-color: #007bff;
+}
+.info{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.info h2{
+    margin-bottom: 10px;
+    text-align: center;
+}
+.info ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.info ul li{
+    padding: 10px 5px;
+}
+.info ul li:nth-child(2n){
+    background-color: #f0f0f0;
+}
+.footer{
+grid-area: footer;
+background-color: #003366;
+color: #ffff;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1rem;
+gap: 5px;
+}
